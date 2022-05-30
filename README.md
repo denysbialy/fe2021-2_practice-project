@@ -14,22 +14,15 @@
 
 ## Запуск серверной части (в т.ч. серверов баз данных)
 
-1. (Один раз). <br>
-   Вам понадобится новый терминал. <br>
-   Установить приложение для контейнеризации [Docker](https://docs.docker.com/):
+1. Считая, что вы находитесь в корне проекта, перейти в папку с серверной частью приложения:
 
-   - [Ubuntu](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) (выполнить 3 шага)
-   - [Windows](https://docs.docker.com/docker-for-windows/install/)
-   - [Mac](https://docs.docker.com/docker-for-mac/install/)
+   - `cd server`
 
-   и [Docker Compose](https://docs.docker.com/compose/install/) (выбрать нужную ОС).
+2. Запустить серверную часть с помощью следующей команды (При первом запуске не забудьте предварительно загрузить все пакеты: `npm i`):
 
-1. (Каждый раз). <br>
-   Вам понадобится еще один новый терминал. <br>
-   Для запуска серверной части приложения (+ серверов баз данных) в корневой папке проекта запустить скрипт:
+   - `npm start`
 
-   - `./start-back-dev.sh`
-
+Сервер запустится на компьютере по следующему адресу: [http://localhost:5000](http://localhost:5000) 
 ## Примечания
 
 - При работе приложения в dev-режиме понадобятся данные тестовых банковских карт:
@@ -38,7 +31,19 @@
     - Card number: 4111111111111111
     - Expires end: 09/23
     - cvc/cvv: 505
+    - name: yriy
   - для вывода средств на карту creator`а:
     - Card number: 5105105105105100
     - Expires end: 09/23
     - cvc/cvv: 510
+    - name: creative
+
+- скрипт сервера при первом запуске так-же создаст пару юзеров со следующими данными для входа:
+
+   - Buyer
+      - email : buyer@gmail.com
+      - password: buyer@gmail.com
+   
+   - Creative
+      - email : creative@gmail.com
+      - password: creative@gmail.com
