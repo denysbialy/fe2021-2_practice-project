@@ -19,11 +19,11 @@ const FormInput = ({ classes, label, name, ...rest }) => (
           <input
             type="text"
             {...field}
-            placeholder={touched && error ? error : label}
+            placeholder={label}
             className={inputClassName}
             {...rest}
           />
-          {/* <ErrorMessage name={name} component="span" className={classes.warning} /> */}
+          <ErrorMessage name={name} component="span" className={classes.warning} />
         </div>
       );
     }}
