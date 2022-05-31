@@ -101,9 +101,9 @@
               li
                 box-sizing: border-box
                 width: 100%
-                padding: 10px 15px
                 display: flex
                 justify-content: flex-start
+                
 
                 &:hover
                   background: #f9fafb
@@ -112,6 +112,8 @@
                   font-size: 12px
                   text-decoration: none
                   color: #333
+                  padding: 10px 15px
+                  width: 100%
 
                   &:hover
                     color: #f27e51
@@ -121,6 +123,16 @@
               font-size: 15px
               font-weight: 300
               padding: 15px 0
+
+  .logoutBtn
+    padding: 5px 20px
+    cursor: pointer
+    width: 100%
+    border: none
+    background-color: white
+    display: flex
+    justify-content: flex-start
+
 
   .loginSignnUpHeaders
     margin-top: 30px
@@ -220,10 +232,11 @@
         padding: 0 5px
         margin-left: 0
 
-      span
+      a
         color: #337ab7
         font-size: 14px
         margin-left: 10px
+        text-decoration: none
         @media(max-width: 360px)
           font-size: 12px
 
@@ -251,4 +264,3 @@
       letter-spacing: 0.3px
       color: lightyellow
       text-decoration: underline
-
