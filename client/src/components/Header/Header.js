@@ -8,6 +8,7 @@ import {
   clearUserStore,
   headerRequest,
 } from "../../actions/actionCreator";
+import NavLinks from "../HeaderNavLinks";
 
 class Header extends React.Component {
   componentDidMount() {
@@ -121,151 +122,16 @@ class Header extends React.Component {
           </div>
         </div>
         <div className={styles.navContainer}>
-          <a href="/">
+          <Link to="/">
             <img
               src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`}
               className={styles.logo}
               alt="blue_logo"
             />
-          </a>
+          </Link>
           <div className={styles.leftNav}>
             <div className={styles.nav}>
-              <ul>
-                <li>
-                  <span>Name Ideas</span>
-                  <img
-                    src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
-                    alt="menu"
-                  />
-                  <ul>
-                    <li>
-                      <a href="http://www.google.com">Beauty</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Consulting</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">E-Commerce</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Fashion & Clothing</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Finance</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Real Estate</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Tech</a>
-                    </li>
-                    <li className={styles.last}>
-                      <a href="http://www.google.com">More Categories</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span>Contests</span>
-                  <img
-                    src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
-                    alt="menu"
-                  />
-                  <ul>
-                    <li>
-                      <a href="http://www.google.com">How it works</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Pricing</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Agency Service</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Active Contests</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Winners</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Leaderboard</a>
-                    </li>
-                    <li className={styles.last}>
-                      <a href="http://www.google.com">Become a Creative</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span>Our Work</span>
-                  <img
-                    src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
-                    alt="menu"
-                  />
-                  <ul>
-                    <li>
-                      <a href="http://www.google.com">Names</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Taglines</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Logos</a>
-                    </li>
-                    <li className={styles.last}>
-                      <a href="http://www.google.com">Testimonials</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span>Names For Sale</span>
-                  <img
-                    src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
-                    alt="menu"
-                  />
-                  <ul>
-                    <li>
-                      <a href="http://www.google.com">Popular Names</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Short Names</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Intriguing Names</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Names by Category</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Visual Name Search</a>
-                    </li>
-                    <li className={styles.last}>
-                      <a href="http://www.google.com">Sell Your Domians</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span>Blog</span>
-                  <img
-                    src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
-                    alt="menu"
-                  />
-                  <ul>
-                    <li>
-                      <a href="http://www.google.com">Ultimate Naming Guide</a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">
-                        Poetic Devices In Business Naming
-                      </a>
-                    </li>
-                    <li>
-                      <a href="http://www.google.com">Crowded Bar Theory</a>
-                    </li>
-                    <li className={styles.last}>
-                      <a href="http://www.google.com">All Articles</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <NavLinks navigation={CONSTANTS.NAVIGATION_LINKS} />
             </div>
             {this.props.data && this.props.data.role !== CONSTANTS.CREATOR && (
               <div
