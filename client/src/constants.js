@@ -112,5 +112,6 @@ export default {
       "Crowded Bar Theory",
       "All Articles",
     ],
+    "Squadhelp Pricing": []
   },
 };
